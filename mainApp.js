@@ -1,10 +1,3 @@
-// const timeout_label = document.getElementById("timout_label");
-// timeout_label.innerHTML = "YOU GOT HACKED !!!!"
-
-const someFunc = () => {
-    console.log("Something!");
-}
-
 const startApp = () => {
     const main_cont = document.getElementById("type_area");
 
@@ -30,8 +23,20 @@ const startApp = () => {
     const result_div = document.createElement("div");
     result_div.appendChild(letter_count_label);
 
+    const no_of_sec_in_timeout = Number(document.getElementById("timeout_in_sec").value);
+    setTimeout(() => {
+        console.log(`${no_of_sec_in_timeout} seconds are up!`);
+        // TODO: Create a label in a div that would display after letter count
+        // TODO: Get the whole value string from user_input.value and split it with space " " to get a list
+        // TODO: Get the original list by splitting new_label.innerHTML.split(" ")
+        // TODO: Compare the user input list of words with the original list of words to check how many words matched
+        // TODO: Update the label in step one to display matched words like: "Matched Words: 10"  
+    }, no_of_sec_in_timeout * 1000);
+
     main_cont.appendChild(action_to_perform);
     main_cont.appendChild(new_label);
     main_cont.appendChild(user_input_div);
     main_cont.appendChild(result_div);
+    
+    console.log("REACHED THE END!");
 }
