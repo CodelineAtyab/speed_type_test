@@ -1,17 +1,59 @@
 <html>
     <head>
         <title>Speedo</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            /* Container */
+            .card-container {
+              display: flex;
+              justify-content: space-around;
+              margin-top: 50px;
+            }
+        
+            /* Individual Card */
+            .card {
+              width: 200px;
+              height: 300px;
+              background-color: #f1f1f1;
+              border: 2px solid #ccc;
+              border-radius: 8px;
+              text-align: center;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+        
+            /* Title */
+            .title {
+              margin-top: 50px;
+              font-size: 24px;
+              font-weight: bold;
+            }
+        
+            /* Author */
+            .author {
+              margin-top: 20px;
+              font-size: 18px;
+            }
+        
+            /* Year */
+            .year {
+              margin-top: 20px;
+              font-size: 16px;
+            }
+          </style>
     </head>
     <body>
+        <div id="book_holder_div" class="card-container"></div>
+
         <!-- <a href="https://www.google.com">Click here to Jump to google!</a> -->
         <div id="time_selection">
             <label id="timout_label">Please suggest the time limit in seconds</label>
             <input id="timeout_in_sec" type="number" value="5"/>
-            <button onclick="startApp()">Start Test</button>
+            <button type="button" class="btn btn-primary" onclick="startApp()">Start Test</button>
         </div>
 
         <div id="type_area">
         </div>
         <script src="./mainApp.js"></script>
+        <script src="./reqMaker.js"></script>
     </body>
 </html>
